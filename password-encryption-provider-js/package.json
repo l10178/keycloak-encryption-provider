@@ -1,0 +1,23 @@
+{
+  "name": "password-encryption-provider-js",
+  "version": "1.0.0",
+  "description": "A keycloak password encryption provider.",
+  "main": "/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [
+    "keycloak",
+    "password",
+    "encryption"
+  ],
+  "author": "",
+  "license": "Apache-2",
+  "dependencies": {
+    "node-jose": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
