@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '5.2.0'
+}
+
+sourceCompatibility = '11.0'
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+ext {
+    keycloakVersion = '12.0.3'
+}
+
+repositories {
+    // maven { url "https://maven.aliyun.com/nexus/content/groups/public/" }
+	mavenCentral()
+}
+
+dependencies {
+    compileOnly("org.keycloak:keycloak-core:${keycloakVersion}")
+    compileOnly("org.keycloak:keycloak-server-spi:${keycloakVersion}")
+    implementation("org.keycloak:keycloak-server-spi-private:${keycloakVersion}")
+    compileOnly("org.keycloak:keycloak-services:${keycloakVersion}")
+    compileOnly("org.jboss.logging:jboss-logging:3.3.2.Final")
+    implementation("com.nimbusds:nimbus-jose-jwt:9.4.2")
+}
+
+shadowJar {
+    archiveBaseName.set("password-encryption-provider")
+    archiveClassifier.set('')
+}
