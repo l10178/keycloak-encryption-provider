@@ -31,9 +31,9 @@ Git clone the source, build java and js, and rebuild the keycloak images by your
 
 Or pull the docker image `nxest/keycloak-encryption-provider`, add a init container to your keycloak helm charts, copy the release files to the keycloak home.
 
-## Releases
+## Compatibility
 
-| Version | Keycloak Version |
+| Release | Keycloak Version |
 | ------- | ---------------- |
 | 1.x.x   | 10.x/11.x/12.x   |
 
